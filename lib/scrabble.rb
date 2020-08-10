@@ -1,7 +1,7 @@
 class Scrabble
 
   def initialize(word)
-    @word = word.split('')
+    @word = word.downcase.split('')
     @one = ['a', 'e', 'i', 'o', 'u', 'l', 'n', 'r', 's', 't']
     @two = ['d', 'g']
     @three = ['b', 'c', 'm', 'p']

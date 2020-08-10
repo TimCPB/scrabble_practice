@@ -18,4 +18,12 @@ describe Scrabble do
     scrabble = Scrabble.new('street')
     expect(scrabble.score).to eq(6)
    end
+   it "score method returns 22 for the word 'quirky'" do
+    scrabble = Scrabble.new('quirky')
+    expect(scrabble.score).to eq(22)
+   end
+   it "copes with characters of different cases" do
+    scrabble = Scrabble.new('OXYPHENBUTAZONE')
+    expect(scrabble.score).to eq(41)
+   end
 end
