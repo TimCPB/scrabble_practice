@@ -26,4 +26,8 @@ describe Scrabble do
     scrabble = Scrabble.new('OXYPHENBUTAZONE')
     expect(scrabble.score).to eq(41)
    end
+   it "only returns a core for a string of letters" do
+    scrabble = Scrabble.new("\t\n")
+    expect(scrabble.score).to eq(0)
+   end
 end
